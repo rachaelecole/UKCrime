@@ -1,0 +1,2435 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{9BC2E488-356D-4EBE-BE6B-62E8D7D0B158}" Name="crimeprofiling.xml">
+      <DtsConnectionManagerID>crimeprofiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{836C1262-F866-4809-B7CA-52537F863513}" Name="KG_TRAINING16\KUBRICK.UKCRIME">
+      <DtsConnectionManagerID>KG_TRAINING16\KUBRICK.UKCRIME</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table Schema="dbo" Table="Crime_Oct15_Sep16" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime ID" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Month" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Reported by" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Falls within" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Longitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Latitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Location" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA code" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA name" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime type" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Last outcome category" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Context" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime ID" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>64</MinLength>
+        <MaxLength>64</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>64</Length>
+            <Count>4083174</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Month" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>4083174</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Reported by" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>11</MinLength>
+        <MaxLength>34</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>122534</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>157161</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>178494</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>85589</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>173056</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>322422</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>202714</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>520043</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>340351</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>327760</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>289475</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>230107</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>68484</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>804369</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>30399</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>130788</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>99428</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Falls within" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>11</MinLength>
+        <MaxLength>34</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>122534</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>157161</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>203006</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>89709</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>173056</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>346724</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>149780</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>520043</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>340351</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>327760</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>289475</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>230107</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>68484</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>804369</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>30399</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>130788</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>99428</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Longitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>98254</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>525222</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>3459698</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Latitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>98254</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>3984920</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Location" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>10</MinLength>
+        <MaxLength>54</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>13825</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>98254</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1776</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>4926</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>8977</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>12578</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>9627</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>13796</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>74068</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>178490</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>214049</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>573750</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>598439</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>635821</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>567500</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>366623</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>235368</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>184139</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>80418</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>43984</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>41558</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>16678</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>69620</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>4390</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>2284</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>36</Length>
+            <Count>2518</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>748</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>38</Length>
+            <Count>453</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>6340</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>40</Length>
+            <Count>428</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>451</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>155</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>270</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>44</Length>
+            <Count>95</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>293</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>46</Length>
+            <Count>19537</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>47</Length>
+            <Count>71</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>48</Length>
+            <Count>430</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>49</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>50</Length>
+            <Count>98</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>51</Length>
+            <Count>196</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>52</Length>
+            <Count>24</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>53</Length>
+            <Count>23</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>54</Length>
+            <Count>101</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA code" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>196880</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>3886294</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA name" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>33</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>196880</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>47188</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>228008</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>391057</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>513254</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>502590</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>555878</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>484886</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>157426</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>71006</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>198971</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>174512</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>58155</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>30997</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>65807</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>71664</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>54859</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>83365</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>73012</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>51813</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>19983</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>14536</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>20997</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>16330</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime type" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>28</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>140798</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>53736</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>405841</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>918991</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>233639</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>465300</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>111175</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>564285</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>1189409</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Last outcome category" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>51</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>99428</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>26566</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>91603</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>881652</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>152754</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>45795</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>149392</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>25311</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>579434</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>12994</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>27005</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>44982</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>36</Length>
+            <Count>24543</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>7320</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>40</Length>
+            <Count>20458</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>31905</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>9678</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>39386</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>1810724</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>51</Length>
+            <Count>2244</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Context" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>0</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>4083174</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <KeyColumns>
+          <Column Name="Crime ID" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.9679237</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>9200e0c49ef5868112fbf5db398c3ab069143ceeaf5790d8ac83ac130f2475bc</ColumnValue>
+            </ColumnValues>
+            <Count>37</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5a86e44539174cebfa5bc1f0a9ea8f27506c8304f7f158b1272b30a8d77da3f9</ColumnValue>
+            </ColumnValues>
+            <Count>24</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>69a4de2d65a847307c731fa68567171c2810ce57acdf8a10c98744a0d9936b3f</ColumnValue>
+            </ColumnValues>
+            <Count>22</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>dabe96837c8187f90e0b07104081a2e6b3b4509297dc6552c9fc0c189041f608</ColumnValue>
+            </ColumnValues>
+            <Count>19</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>6e1e86076f6c9eadcd159d410d30f4928ef434a73aa1b22ec2a72ed0f54d81b0</ColumnValue>
+            </ColumnValues>
+            <Count>17</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>a8cc4066f7ea602fd76fe7370ce9cb7fc438dcf908b82b511ea90706e59d4eab</ColumnValue>
+            </ColumnValues>
+            <Count>15</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2785a357c6fe9f1f4e598db8d01d45b3b2fce32d78612cade5d1e127cf8931d4</ColumnValue>
+            </ColumnValues>
+            <Count>15</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2fe95ada3a2d08a5c0463cffa47d6ec4e1b2583e17ac7a90dc0062d7d6c482ca</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>1b6863b7613b38287ac83e137121f014aa7812c3fb378e016094b307cc155443</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2f5d1a57447bf8c7b05874163d76ab4f0709e33444217b30f66e7233223a0faa</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2f6beb12632badae10303c312c9289d10ea7f9591726a36f773e59ad0f45bf80</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2fc778be74c18140f01e5f51f373255f5e9a112c85551b5b953063c4b1a24199</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2db6675f9db610593c5a2067ec3eaff5a36e07fd30a519361ecbe4f1f2e8f6c4</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2fb239e69863c2920fc16c2cfe018918c2335731aadb67b42cc28e7d5dd04186</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>1b8f95e22a103ecc0b4c559ae2dfe6fd53418ad4186bfddf03ec8f75f7df9dc3</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>292bf91afc958dee422120e79a679c17f3d590e35a43541ec6f62851f9b12211</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>26c0e49ead5f7700308bdc28c7f6174a5adc417dfa345f63e1bc3ef244f20aed</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>270638e710ba057951614c5b27885480662ed80029a19e19d233ec882ca1bd25</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27640fcbce5a4f862e1c11d91aebfc65b5cda20c40d62ef77211d45bb0db3ec7</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>279b4f556afdf6aee68997d85dd17c768d0bb675f1b2364935b5c48f0628538b</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>274b9844d65509b5f7c9439236f76c6ae623c02da97a4f1d78f364b30ca9baab</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>283d51353ec027deb13f93b5ba6682a3cb392ac7cc25c6aa966b29ed164da1d5</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28814ffd2e8136bb3efd726382701d5fb7b426e13b0d9dd14754d47c39fec253</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28ea1f1165201b6def01533048010cf212b007fcb0e924c496684fb2cc7bec34</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2ecb513e630077dbfda88419ec2ecc5e7ed2f3cef7d2805e70e082f31427dcda</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2f30a175210ebf095682302d7b39daec1d403d306df348169ed2e55c1378eea8</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2f6c57d70102488b6be4f6fd369262d87998c0fde1a6785241eccc159f9a31a2</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>26b676859477c113b49d1735c4601b5262a840f2c590cd12f1d1a4f0f24a4740</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2718f0734a4c90fb609288a9f97cf9f949f81e6dae385a6756d596056c3ed3a5</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>275a0cac7e1fc1d23f3b2adb6f5f73a4d6ae90df6f606770d681a668f4774fbe</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27a45e5993769b16cae56d513c2a6984d6057897173c5b8b290ef3dd1099e631</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27b84187f10430cc799383acf20267014b89f1d861736c87436690aee2c85d61</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27dc0f9d6907d6093803ea9eaea8ebf656e068ecbb9181a5321aefb167c4b74f</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28251eca8d95a1324419861a79efd94c63be1326f236aae5292f3790fab9ac86</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>282c5bc052480f784be5b11cbc385e6fd85e74854a94fe6b2adbf836d4928bc2</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>287a3e558600bad3aaa4914f92889adcaa6fd38b1fe1c8b64a0dfff006a9d99e</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28d4806ab7d13e8f01fe37cd3fb3ec602e81aad1030a538d7f5ec6f09966d67c</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28ea5d5462b690099429c4139ef9c4eb81f8ad5e7ada19b921b8bcac223939b2</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>29188c2a4dd08110b6825b51106846fae3defacd57abaf1035b1d65f56e5d828</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>299d6c21f6c50caa1f79e31b648f4bb9f86f4b176d24c6ab0cfc7fbb7d71298d</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>26d3bfa5a2bb7e1dc6e15f9090daa95408bf3cf91e9ea9be03119df2516f6d50</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27402884b90150c0eeb888a42f7d517bc66b7ece8f6a28bc0d2eecd5ca93df82</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2747cf01133e3329f47b6e32608ad00a3b09de5fe8f67e4d1f34e3055b9d1b75</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>275b7ad53690bdf5d8245bd0e571726bc0e8b04e74a41fe416abf303ec977031</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27607f02b84e12c9bbc9875bb795fdcea126036a56c17e42e5efaae4ea705e52</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27a590d9734958f5210dcab106efbb5dbf46278faadc1c3c83cae6e8c351255e</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27c131d9425e7af0a395891a211700f81a23fbc2d54ec4dea3cdb3f332b23cf3</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27dd9b0ce9ed03593ea0545c0cb3c2ff8b82b4396ee544d815507e7d6d0cf5fb</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>27fdb4164c30d431dfed2f5737b1766c698d89d0d30cce64560c56ee7dc8abdf</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2803e5d1f7334e837523aa561750fcaea7d26daef9bfc6692551a3caee92159a</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>289fe8d86f70d079b907cbd6468cfdcb90166c33ca6bcf3c90734cf2c0900d45</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28a64140bcb3022ce1c4c9c2be5124ad7b883f5cdf15bb5f8dc9105e9430398d</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>28eff07db2b76f986e5386ff1391ab9d38e3aff67fc290bff97a8b0172301063</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2911ce889daa0b7ba37469f480780343d5ad44240d70e82d9c42abe637d66978</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>296f4fcece5dbe24b66ba6be31ee5ba761037272cc1acfdfd71b700eefd15e3b</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>41339ae6b7c7661a4828aae92da4701c87942288e109963a931c7249823b351c</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4192f9672c0945981a68927046a52eb4e7ce405e6a3bff8bfc549594397bc876</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>41d25a0a2ce06102943b936c2c122bcf70763059d918987a5b19a5cfd06c89e9</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>41ea3431aae0ec62c45f748de5fc83a07414842769c72c2f607ac81aa2664ef3</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>425e4d2dd8a451b8fde8a9d8af1897f34e260e1ffb91358ebac4bd5e9e636cec</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>42f9a9507655ba6d3a5a2003efa2c5313688861728d0d387fd44d768d4a62c0e</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>432f4a746a8c921965b52702353b9ac5b2e4a9ef4d387ea51c8df039ef968bc1</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>433b49744465ae512d7fb86ef2a8abf14cfb4a00b1c3835c1d1faa2dcaf3ad45</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>434cf6d96b62996a9c53e2d31a3caa6cbb40a69580c7aa89bed88314a355a6e8</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>435fd2e24fa1a32c3bed4ddb24b4d70dc3240c7fc03817ee3968eaef7ef9b4a5</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5861910e7aeda8e462efae4b4a80fb89d071477d127c5472cb8cb8d96041d7af</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5870d60f3ac4d639414d170dbfcf09b26d3252cca029b545659deb76ca8ca426</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>58df2a767ae19b955131f6b69224f755c9b9062dc21e94659a694873aa18d66a</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>58e1d3690e577386a31a6a6bcde83e5000b52c8e3bcffcd2b180eab9413b94d1</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>592b23d8c82e445b1fff6a394b946312db4f246f24cfc5626961818297afa0e9</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>592c9d7b918b9064adc236f7a253de95a55bbd97379393f278de4dd3622c0420</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5a7cff2858247eae40aac49e4626583beceb2cc623d7d61fb073286c7b7c957e</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5a96d1f4c737b7c0c3e498695741c7fc7789b16ee4c9772944c19ba8504016cb</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5ac5d9ee31ab2839cbf1187dccdbbf197254d30e358618847f3aeec4db4eccc6</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5b1cb62b13d4386f2ad15af752f559d567f2ea3f32fc9d5d2d1c44e021f2d783</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5916c732130bc0bb273df0f7732aaf5b221d6ce22276f9c48e5d72dfbfa01c08</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5973ede00eaa6fc11f4a294b815dcaeec2f9cb20d203b30257d2976cf4b19cc6</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5975621b2e9efe1de9cfb495961089d5df2dd2f7d7129f392a1b388852d44d39</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5a0cfa81bad531ec15ff07bcdcb4a7eef444f43ae7d9dc7be4437502234385f7</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5a2188529f15defb7b9f8426039e2539b517d36ad600cc335c001d667110f4bc</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5abcc88cc9437712056b1fd4fee4a7458c29856bfc22fadd8b2ce04af32c3c46</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5b073ffe59c5c5a02b178b8cb8761089c40fef3d82ae85c80d73073bcb066171</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5b487c21b59cede7d919d9bb8b4c7fffc9d31286f2f8dcbf7e61461aba04e59f</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3aa3c5c6bf0c040bb897d60635b4036fe07c472d024fc52bae742f7b52766283</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3acdd67d61d39f0c142f9841b0d8340ed6a29a4bad7b8122ab2f331c52afc99b</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3c029d8fb7f195ba012921a97c5b29ad399746fc3283cbab1691f8e95abe1955</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3c4147c09bd5b27c791746318ad4470b8e3ff2fda3bf1116b60d30178fe9d8b3</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3c8506f9c15b46143cc087e0b492633866a62332c7cbda2ecbce7713850340c2</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3cf056a376d5198ba4a276f17b8718b5ec0efb66cb9b9da661d3a52466db8a02</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3d26a35be0302eeaf60e573316a1ff43b59c7475176e176b155b6eaf0f61fe8a</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>36e855bf4ebeeec31204b1623b2ede2d86a6ee7fe1f79ff0a0459256980ca973</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>381f44217a348d4379f97bc1ab8e3d93ec983740c660242051e4bd9e0c49d88e</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>387435853218a03b686cb94fc1b029c0797eef4f4284299fb2ff8c9bc82eade6</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>38748a4e426740d12cc452d117f9d18616fd4a2c45ab67f4744f0d65829c68b3</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>38deaf337f13cc547c067a556338f3efb619bbb60c518f8cbcbc934e54f1b0e2</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>38e8f87d72ee9309d2a7873032d5551390480f179d6833ec08ebfe1ee917af6d</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>486ae5e963e9abfaebd4d783b201e99bd11d7215ca96f41c4f9ac0541e720eb6</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>487372976d2c4ea082c28569a0685718fc2328cdb17c2b904497a239023c2390</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>489dba3ab4b415e17449691267b0ea90fb2d1a65227ce64e00e97907b951485a</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>48ca94f5b9e84254fd70f3e449036bf523fa10f9b3d9a0435d4de02a9246e4c5</ColumnValue>
+            </ColumnValues>
+            <Count>12</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime ID" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3952201</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Month" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2015-12</Value>
+            <Count>326383</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-02</Value>
+            <Count>314722</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-05</Value>
+            <Count>353654</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-08</Value>
+            <Count>359289</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06</Value>
+            <Count>346073</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-11</Value>
+            <Count>333598</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-01</Value>
+            <Count>319342</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-03</Value>
+            <Count>337059</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-04</Value>
+            <Count>330635</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-07</Value>
+            <Count>362133</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-09</Value>
+            <Count>360712</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-10</Value>
+            <Count>339574</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Reported by" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>44</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Bedfordshire Police</Value>
+            <Count>40989</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Greater Manchester Police</Value>
+            <Count>230107</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Surrey Police</Value>
+            <Count>36722</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cumbria Constabulary</Value>
+            <Count>25697</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Essex Police</Value>
+            <Count>116140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Humberside Police</Value>
+            <Count>71394</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Merseyside Police</Value>
+            <Count>101662</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nottinghamshire Police</Value>
+            <Count>71547</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cambridgeshire Constabulary</Value>
+            <Count>51225</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cheshire Constabulary</Value>
+            <Count>52344</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>City of London Police</Value>
+            <Count>5331</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Wales Police</Value>
+            <Count>39202</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Police Service of Northern Ireland</Value>
+            <Count>99428</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cleveland Police</Value>
+            <Count>45889</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Durham Constabulary</Value>
+            <Count>96370</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dyfed-Powys Police</Value>
+            <Count>21961</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gloucestershire Constabulary</Value>
+            <Count>30399</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gwent Police</Value>
+            <Count>41021</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northamptonshire Police</Value>
+            <Count>55014</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Yorkshire Police</Value>
+            <Count>221087</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Devon &amp; Cornwall Police</Value>
+            <Count>80191</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dorset Police</Value>
+            <Count>43555</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Metropolitan Police Service</Value>
+            <Count>753144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Wales Police</Value>
+            <Count>96899</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sussex Police</Value>
+            <Count>98217</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Warwickshire Police</Value>
+            <Count>30170</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Midlands Police</Value>
+            <Count>193965</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wiltshire Police</Value>
+            <Count>39700</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Avon and Somerset Constabulary</Value>
+            <Count>130788</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Derbyshire Constabulary</Value>
+            <Count>53894</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hampshire Constabulary</Value>
+            <Count>113916</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Leicestershire Police</Value>
+            <Count>61589</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lincolnshire Police</Value>
+            <Count>35185</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Yorkshire Police</Value>
+            <Count>104432</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Staffordshire Police</Value>
+            <Count>73537</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suffolk Constabulary</Value>
+            <Count>43948</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Thames Valley Police</Value>
+            <Count>134403</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Mercia Police</Value>
+            <Count>67562</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hertfordshire Constabulary</Value>
+            <Count>68484</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kent Police</Value>
+            <Count>122534</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lancashire Constabulary</Value>
+            <Count>100376</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Norfolk Constabulary</Value>
+            <Count>48493</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Yorkshire Police</Value>
+            <Count>37865</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northumbria Police</Value>
+            <Count>96798</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Falls within" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>44</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Bedfordshire Police</Value>
+            <Count>40989</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Greater Manchester Police</Value>
+            <Count>230107</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Surrey Police</Value>
+            <Count>61234</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cumbria Constabulary</Value>
+            <Count>25697</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Essex Police</Value>
+            <Count>116140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Humberside Police</Value>
+            <Count>71394</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Merseyside Police</Value>
+            <Count>101662</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nottinghamshire Police</Value>
+            <Count>71547</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hertfordshire Constabulary</Value>
+            <Count>68484</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kent Police</Value>
+            <Count>122534</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lancashire Constabulary</Value>
+            <Count>100376</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Norfolk Constabulary</Value>
+            <Count>48493</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Yorkshire Police</Value>
+            <Count>37865</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northumbria Police</Value>
+            <Count>114455</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cleveland Police</Value>
+            <Count>50009</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Durham Constabulary</Value>
+            <Count>40679</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dyfed-Powys Police</Value>
+            <Count>21961</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gloucestershire Constabulary</Value>
+            <Count>30399</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gwent Police</Value>
+            <Count>41021</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northamptonshire Police</Value>
+            <Count>55014</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Yorkshire Police</Value>
+            <Count>221087</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Devon &amp; Cornwall Police</Value>
+            <Count>80191</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dorset Police</Value>
+            <Count>43555</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Metropolitan Police Service</Value>
+            <Count>753144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Wales Police</Value>
+            <Count>96899</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sussex Police</Value>
+            <Count>98217</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Warwickshire Police</Value>
+            <Count>32927</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Midlands Police</Value>
+            <Count>193965</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wiltshire Police</Value>
+            <Count>39700</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Avon and Somerset Constabulary</Value>
+            <Count>130788</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Derbyshire Constabulary</Value>
+            <Count>53894</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hampshire Constabulary</Value>
+            <Count>113916</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Leicestershire Police</Value>
+            <Count>61589</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lincolnshire Police</Value>
+            <Count>35185</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Yorkshire Police</Value>
+            <Count>104432</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Staffordshire Police</Value>
+            <Count>73537</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suffolk Constabulary</Value>
+            <Count>43948</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Thames Valley Police</Value>
+            <Count>134403</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Mercia Police</Value>
+            <Count>74207</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cambridgeshire Constabulary</Value>
+            <Count>51225</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cheshire Constabulary</Value>
+            <Count>52344</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>City of London Police</Value>
+            <Count>5331</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Wales Police</Value>
+            <Count>39202</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Police Service of Northern Ireland</Value>
+            <Count>99428</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Longitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>553695</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value />
+            <Count>98254</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Latitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>537617</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value />
+            <Count>98254</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Location" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>222195</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>On or near Hospital</Value>
+            <Count>19153</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Prison</Value>
+            <Count>6679</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near London Road</Value>
+            <Count>5644</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Nightclub</Value>
+            <Count>41179</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Petrol Station</Value>
+            <Count>95641</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Supermarket</Value>
+            <Count>164601</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Parking Area</Value>
+            <Count>128615</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Sports/Recreation Area</Value>
+            <Count>62304</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Bus/Coach Station</Value>
+            <Count>10722</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Church Street</Value>
+            <Count>6746</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Bridge Street</Value>
+            <Count>4147</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near </Value>
+            <Count>13825</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Conference/Exhibition Centre</Value>
+            <Count>6025</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Further/Higher Educational Building</Value>
+            <Count>19535</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>No Location</Value>
+            <Count>98254</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Shopping Area</Value>
+            <Count>114019</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Police Station</Value>
+            <Count>16096</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Station Road</Value>
+            <Count>8269</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near High Street</Value>
+            <Count>19531</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Market Street</Value>
+            <Count>4202</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Theatre/Concert Hall</Value>
+            <Count>13133</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Pedestrian Subway</Value>
+            <Count>32943</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>On or near Park/Open Space</Value>
+            <Count>17946</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA code" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>34750</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>E01033658</Value>
+            <Count>4674</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>196880</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01004734</Value>
+            <Count>4303</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01033010</Value>
+            <Count>5943</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01033595</Value>
+            <Count>5311</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA name" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>34750</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Westminster 018A</Value>
+            <Count>4303</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Manchester 054C</Value>
+            <Count>4674</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Westminster 013E</Value>
+            <Count>5311</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>196880</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Leeds 111B</Value>
+            <Count>5943</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime type" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>13</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Drugs</Value>
+            <Count>140798</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Public order</Value>
+            <Count>233639</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other theft</Value>
+            <Count>495012</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Possession of weapons</Value>
+            <Count>29706</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Robbery</Value>
+            <Count>53736</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vehicle crime</Value>
+            <Count>382063</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Criminal damage and arson</Value>
+            <Count>564285</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Violence and sexual offences</Value>
+            <Count>1189409</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bicycle theft</Value>
+            <Count>83237</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Burglary</Value>
+            <Count>405841</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Theft from the person</Value>
+            <Count>81469</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other crime</Value>
+            <Count>70632</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Shoplifting</Value>
+            <Count>353347</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Last outcome category" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>26</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Local resolution</Value>
+            <Count>91603</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Unable to prosecute suspect</Value>
+            <Count>579434</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given a drugs possession warning</Value>
+            <Count>31905</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given suspended prison sentence</Value>
+            <Count>20458</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Court result unavailable</Value>
+            <Count>58340</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender fined</Value>
+            <Count>26566</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender sent to prison</Value>
+            <Count>45795</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>99428</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Formal action is not in the public interest</Value>
+            <Count>39386</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given community sentence</Value>
+            <Count>44176</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender otherwise dealt with</Value>
+            <Count>4793</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Court case unable to proceed</Value>
+            <Count>12994</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Investigation complete; no suspect identified</Value>
+            <Count>1810724</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given a caution</Value>
+            <Count>91052</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given conditional discharge</Value>
+            <Count>20978</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Offender given penalty notice</Value>
+            <Count>19415</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Action to be taken by another organisation</Value>
+            <Count>9678</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Awaiting court outcome</Value>
+            <Count>152754</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Defendant found not guilty</Value>
+            <Count>25311</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suspect charged as part of another case</Value>
+            <Count>7320</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Under investigation</Value>
+            <Count>881652</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Context" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value />
+            <Count>4083174</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime ID" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\w+</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Month" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>2016-\d\d</RegexText>
+            <Frequency>76</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>2015-\d\d</RegexText>
+            <Frequency>24</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Reported by" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>METROPOLITAN POLICE SERVICE</RegexText>
+            <Frequency>18</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+POLICE</RegexText>
+            <Frequency>56</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+CONSTABULARY</RegexText>
+            <Frequency>21</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Falls within" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>METROPOLITAN POLICE SERVICE</RegexText>
+            <Frequency>19</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+POLICE</RegexText>
+            <Frequency>57</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+CONSTABULARY</RegexText>
+            <Frequency>19</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Longitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>-\d\.\d\d\d\d\d\d</RegexText>
+            <Frequency>87</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\.\d\d\d\d\d\d</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Latitude" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>5\d\.\d\d\d\d\d\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Location" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ON OR NEAR (\p{L}+ )+</RegexText>
+            <Frequency>91</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+</RegexText>
+            <Frequency>3</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA code" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>E010\d\d\d\d\d</RegexText>
+            <Frequency>95</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}010\d\d\d\d\d</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="LSOA name" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+0\d\d\p{L}</RegexText>
+            <Frequency>96</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Crime type" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>VIOLENCE AND SEXUAL OFFENCES</RegexText>
+            <Frequency>29</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CRIMINAL DAMAGE AND ARSON</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>OTHER THEFT</RegexText>
+            <Frequency>12</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHOPLIFTING</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>VEHICLE CRIME</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>BURGLARY</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>PUBLIC ORDER</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ THEFT</RegexText>
+            <Frequency>2</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ CRIME</RegexText>
+            <Frequency>2</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{836C1262-F866-4809-B7CA-52537F863513}</DataSourceID>
+        <Table DataSource="KG_TRAINING16\KUBRICK" Database="UKCRIME" Schema="dbo" Table="Crime_Oct15_Sep16" RowCount="4083174" />
+        <Column Name="Last outcome category" SqlDbType="VarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>INVESTIGATION COMPLETE; NO SUSPECT IDENTIFIED</RegexText>
+            <Frequency>45</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>UNDER INVESTIGATION</RegexText>
+            <Frequency>23</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>UNABLE TO PROSECUTE SUSPECT</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>OFFENDER GIVEN (\p{L}+ )+</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>OFFENDER (\p{L}+ )+</RegexText>
+            <Frequency>2</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
